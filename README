@@ -14,6 +14,16 @@ If you don't like XeTeX, or don't want to use it for some reason, ordinary LaTeX
 If you want to switch between the pdflatex and xelatex commands, you can do so in lib/Makefile.in. 
 
 
+WRITING A DOCUMENT
+
+I've written a lot of TODOs in the files in the project. They're actually not for me but for you. Fill in whatever it says you're supposed to fill in there, and you'll be fine.
+
+Basically, the process of writing a document is about filling out the different sections required in the document.
+
+The .tex-files for these sections can be found in the $whatever_document_you_are_writing/sections/ directory and are named descriptively. If you look at $whatever_document_you_are_writing/$whatever_document_you_are_writing.tex, you can see a list of what sections are available, and what they will be called in the actual documnet.
+
+Meeting minutes are a part of these documents (at least in the software engineering course at KTH). My build script will automatically include any minutes in pdf format placed in the $whatever_document_you_are_writing/appendices/minutes/ directory.
+
 BUILDING A DOCUMENT
 
 In order to build a specific document (for example ppd.pdf), simply position yourself in the root directory and type one of these lines (they are identical):
