@@ -1,0 +1,39 @@
+\def\thedocument{Project Planning Document}
+\def\thedate{DATE} % TODO: insert proper date here
+\def\theversion{0.1}
+\def\thestatus{Working copy}
+
+\input{../lib/includes}
+\input{../lib/defines}
+\input{../config}
+\input{../lib/begin_document}
+% PPD Table of Contents.
+\section{Statement of the Problem}
+	\subsection{Statement of the Problem}
+		\input{sections/statement}
+	\subsection{Motivation}
+		\input{sections/motivation}
+	\subsection{Goals}
+		\input{sections/goals}
+	\subsection{Skills Baseline}
+		\input{sections/skills}
+\section{Background to the Problem}
+	\subsection{Commercial background}
+		\input{sections/commercial}
+	\subsection{Technical background}
+		\input{sections/technical}
+\section{Conclusion: Feasibility Assessment}
+	\input{sections/conclusion}
+\appendix
+
+\chapter{Group members}
+	\input{appendices/members}
+
+\chapter{Job roles}
+	\input{appendices/roles}
+
+\chapter{Minutes}
+	\input{appendices/minutes}
+
+\end{document}
+
