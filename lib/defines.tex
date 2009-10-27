@@ -1,0 +1,18 @@
+% fulhack för att se till att vi inte får med kapitel-numrering.
+\renewcommand{\chaptername}{}
+\renewcommand{\thechapter}{}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\and}{\\}
+\newcommand{\documentstatus}{\small{\theversion\ -- \thestatus}}
+\newenvironment{itemize*}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+\pagestyle{fancy}\headheight 13pt
+\fancyfoot{}
+\lhead{\thecode\ \thecourse}
+\rhead{\theproject}
+\fancyfoot[LE,RO]{\thepage}

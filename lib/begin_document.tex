@@ -1,0 +1,35 @@
+\begin{document}
+\input{../lib/fancyhdr}
+\begin{titlepage}
+  \title{\thedocument\\\theproject\\\documentstatus}
+  \author{\input{authors}}
+  \date{\thedate} % TODO: insert date here
+\end{titlepage}
+\maketitle
+\thispagestyle{emptyfoot}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\newpage
+\thispagestyle{emptyfoot}
+\begin{abstract}
+  \input{sections/abstract}
+\end{abstract}
+\tableofcontents
+\pagenumbering{roman}
+\newpage
+% Make sure the next content page starts on a right-hand page.
+\cleardoublepage
+
+\chapter*{\thedocument}
+\addcontentsline{toc}{chapter}{\thedocument}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\section{Introduction} % (fold)
+\label{sec:introduction}
+\subsection{Document Status} % (fold)
+\label{sub:document_status}
+\documentstatus
+% subsection document_status (end)
+\input{revisions}
+% section introduction (end)

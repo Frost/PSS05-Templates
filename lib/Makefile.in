@@ -1,0 +1,17 @@
+# General rules for all Documents
+
+RM= rm
+MV= mv
+TRASH= *.{log,aux,toc,idx,ind,out,lof,lot,bib,pdf,dvi,maf,mtc*}
+
+# Change these values to latex and pdflatex respectively unless you're using XeTeX
+LATEX= xetex
+PDFLATEX= xelatex
+
+all: pdf
+
+minutes_list: appendices/minutes.tex
+	../lib/generate_minutes_list.sh
+
+.SILENT: clear clean pdf
+.PHONY: clean	 minutes_list
