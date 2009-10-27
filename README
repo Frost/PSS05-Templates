@@ -1,0 +1,44 @@
+PSS 05 TEMPLATES
+
+PSS 05 templates for use in the Software Development course at KTH.
+
+
+REQUIREMENTS
+
+In order to build these templates, you'll need some way of building .tex files, as well as gnumake (if you want to be able to use the Makefiles).
+
+Personally, I prefer XeTeX for building the PDFs, since it's quite nice to work with, and doesn't have many of the problems LaTeX has with unicode. 
+
+If you don't like XeTeX, or don't want to use it for some reason, ordinary LaTeX (the latex or pdflatex commands) will work just fine. However, if you need to input any unicode characters, you might want to uncomment line 4 in lib/includes.tex in order to be able to view those characters properly.
+
+If you want to switch between the pdflatex and xelatex commands, you can do so in lib/Makefile.in. 
+
+
+BUILDING A DOCUMENT
+
+In order to build a specific document (for example ppd.pdf), simply position yourself in the root directory and type one of these lines (they are identical):
+
+$ make ppd
+$ make ppd.pdf
+
+The generated file will then be available in the ppd directory, named ppd.pdf.
+
+If you want to build ppd.dvi, you instead type:
+
+$ make ppd.dvi
+
+Should you want to build all documents at the same time, you can simply write one of these lines:
+
+$ make
+$ make pdf
+$ make dvi
+
+The two first lines will build pdf versions of the document, whereas the last one will build a dvi version.
+
+
+LICENCE
+
+"THE BEER-WARE LICENSE" (Revision 42):
+<blame@kth.se> wrote this file. As long as you retain this notice you
+can do whatever you want with this stuff. If we meet some day, and you think
+this stuff is worth it, you can buy me a beer in return. /Martin Frost
