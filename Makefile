@@ -1,6 +1,4 @@
-# Makefile for documents related to Clockwork
-
-include lib/Makefile.in
+# Makefile for PSS 05 Documents
 
 PPD= ppd
 URD= urd
@@ -13,27 +11,15 @@ DOCUMENTS= $(PPD).pdf $(URD).pdf $(SRD).pdf $(ADD).pdf
 
 pdf: $(DIRS)
 
-%.dvi: %/*.tex
-	$(MAKE) -C `echo $@|sed -e 's/\..*//'` dvi
-
 %.pdf: %/*.tex
-	$(MAKE) -C `echo $@|sed -e 's/\..*//'` pdf
+	-$(MAKE) -C $*
 
-clear:
+clean:
 	for dir in $(DIRS); do $(MAKE) -C $$dir clean; done
 
-clean: clear
-	@echo "removing documents..."
-	-$(RM) -f $(DOCUMENTS)
-
 $(PPD): clean $(PPD).pdf
-	$(MV) $(PPD)/$(PPD).pdf .
-
 $(URD): clean $(URD).pdf
-	$(MV) $(URD)/$(URD).pdf .
-
 $(SRD): clean $(SRD).pdf
-	$(MV) $(SRD)/$(SRD).pdf .
-
 $(ADD): clean $(ADD).pdf
-	$(MV) $(ADD)/$(ADD).pdf .
+
+.PHONY: $(PPD) $(URD) $(SRD) $(ADD)
