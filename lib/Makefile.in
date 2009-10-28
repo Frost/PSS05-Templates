@@ -3,15 +3,23 @@
 RM= rm
 MV= mv
 TRASH= *.{log,aux,toc,idx,ind,out,lof,lot,bib,pdf,dvi,maf,mtc*}
+SECTIONS= *.tex sections/*.tex sections/*/*.tex appendices/*.tex authors.tex
 
-# Change these values to latex and pdflatex respectively unless you're using XeTeX
-LATEX= xetex
+# Change this value pdflatex unless you're using XeTeX
 PDFLATEX= xelatex
 
 all: pdf
 
+%.pdf: minutes_list $(SECTIONS)
+	$(PDFLATEX) $* && $(PDFLATEX) $*
+
 minutes_list: appendices/minutes.tex
 	../lib/generate_minutes_list.sh
+
+clean:
+	-$(RM) -f $(TRASH)
+	-$(RM) -f appendices/minutes/minutes_* appendices/minutes/mpdf.tex
+	-$(RM) -f *.pdf
 
 .SILENT: clear clean pdf
 .PHONY: clean	 minutes_list

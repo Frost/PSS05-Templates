@@ -3,13 +3,31 @@
 \renewcommand{\thechapter}{}
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\and}{\\}
+
 \newcommand{\documentstatus}{\small{\theversion\ -- \thestatus}}
+
 \newenvironment{itemize*}{
 \begin{itemize}
   \setlength{\itemsep}{1pt}
   \setlength{\parskip}{0pt}
   \setlength{\parsep}{0pt}
 }{\end{itemize}}
+
+\def\requirement#1#2{
+  \subsubsection*{}
+  \noindent
+  \setlength{\extrarowheight}{4pt}
+  \begin{tabularx}{\linewidth}%
+    {l>{\setlength\hsize{0.67\hsize}}X% 
+    >{\setlength\hsize{1.33\hsize}}X} 
+     \toprule
+
+  % Table content
+  \multicolumn{2}{c}{\textbf{#1}} \\ \midrule
+  #2
+   \bottomrule 
+  \end{tabularx} \\ \\ \\
+}
 
 \pagestyle{fancy}\headheight 13pt
 \fancyfoot{}
