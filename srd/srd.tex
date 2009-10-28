@@ -1,0 +1,107 @@
+\def\thedocument{System Requirements Document}
+\def\thedate{DATE} % TODO: insert proper date here
+\def\theversion{0.1}
+\def\thestatus{Working copy}
+
+\input{../lib/includes}
+\input{../lib/defines}
+\input{../config}
+\input{../lib/begin_document}
+
+% URD Table of Contents
+
+\section{Introduction} % (fold)
+  \label{sec:introduction}
+  \subsection{Purpose}
+    \label{sec:purpose}
+    \input{sections/intro/purpose}
+  \subsection{Scope of the software}
+    \label{sec:scope_of_the_software}
+    \input{sections/intro/scope}
+  \subsection{Definitions}
+    \label{sec:definitions}
+    \input{sections/intro/definitions}
+  \subsection{References}
+    \label{sec:references}
+    \input{sections/intro/references}
+  \subsection{Overview of the Document}
+    \label{sec:overview_of_the_document}
+    \input{sections/intro/overview}
+% section introduction (end)
+
+\section{General Description} % (fold)
+  \label{sec:general_description}
+  \subsection{Relation to current projects}
+    \label{sec:relation_to_current_projects}
+    \input{sections/general/current_projects}
+  \subsection{Relation to predecessor and successor projects}
+    \label{sec:relation_to_predecessor_and_successor_projects}
+    \input{sections/general/pred_succ_projects}
+  \subsection{Function \& Purpose}
+    \label{sec:function_&_purpose}
+    \input{sections/general/function_purpose}
+  \subsection{Environmental Considerations}
+    \label{sec:environmental_considerations}
+    \input{sections/general/environmental}
+  \subsection{Relation to other systems}
+    \label{sec:relation_to_other_systems}
+    \input{sections/general/other_systems}
+  \subsection{General Constraints}
+    \label{sec:general_constraints}
+    \input{sections/general/constraints}
+  \subsection{Model Description}
+    \label{sec:model_description}
+    \input{sections/general/model_description}
+% section general_description (end)
+
+\section{Specific Requirements} % (fold)
+  \label{sec:specific_requirements}
+  \subsection{Functional requirements}
+    \label{sec:functional_requirements}
+    \input{sections/specific/functional}
+  \subsection{Interface requirements}
+    \label{sec:interface_requirements}
+    \input{sections/specific/interface}
+  \subsection{Operational requirements}
+    \label{sec:operational_requirements}
+    \input{sections/specific/operational}
+  \subsection{Resource requirements}
+    \label{sec:resource_requirements}
+    \input{sections/specific/resource}
+  \subsection{Verification requirements}
+    \label{sec:verification_requirements}
+    \input{sections/specific/verification}
+  \subsection{Acceptance testing requirements}
+    \label{sec:acceptance_testing_requirements}
+    \input{sections/specific/acceptance}
+  \subsection{Documentation requirements}
+    \label{sec:documentation_requirements}
+    \input{sections/specific/documentation}
+  \subsection{Security requirements}
+    \label{sec:security_requirements}
+    \input{sections/specific/security}
+  \subsection{Portability requirements}
+    \label{sec:portability_requirements}
+    \input{sections/specific/portability}
+  \subsection{Reliability requirements}
+    \label{sec:reliability_requirements}
+    \input{sections/specific/reliability}
+  \subsection{Maintainability requirements}
+    \label{sec:maintainability_requirements}
+    \input{sections/specific/maintainability}
+  \subsection{Safety requirements}
+    \label{sec:safety_requirements}
+    \input{sections/specific/safety}
+% section specific_requirements (end)
+
+\section{User Requirements vs Software Requirements Traceability matrix}
+	See Appendix \ref{chap:matrix}
+\appendix
+
+\chapter{Minutes}
+	\input{appendices/minutes}
+\chapter{Traceability Matrix}
+\label{chap:matrix}
+% \includepdf{graphics/tracability-matrix.pdf} % Or wherever you'll choose to put it
+\end{document}
+
