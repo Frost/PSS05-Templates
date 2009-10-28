@@ -1,0 +1,60 @@
+\def\thedocument{User Requirements Document}
+\def\thedate{DATE} % TODO: insert proper date here
+\def\theversion{0.1}
+\def\thestatus{Working copy}
+
+\input{../lib/includes}
+\input{../lib/defines}
+\input{../config}
+\input{../lib/begin_document}
+
+% ADD Table of Contents
+\section{Introduction}
+  \label{sec:introduction}
+  \subsection{Purpose}
+    \label{sec:purpose}
+    \input{sections/intro/purpose}
+  \subsection{Scope of the software}
+    \label{sec:scope_of_the_software}
+    \input{sections/intro/scope}
+  \subsection{Definitions} 
+    \label{sec:definitions}
+    \input{sections/intro/definitions}
+  \subsection{References}
+    \label{sec:references}
+    \input{sections/intro/references}
+  \subsection{Overview of the Document}
+    \label{sec:overview_of_the_document}
+    \input{sections/intro/overview}
+% section introduction (end)
+
+\section{System Overview}
+  \label{sec:system_overview}
+  \input{sections/overview}
+\section{System Context}
+  \label{sec:system_context}
+  \input{sections/context}
+\section{System Design}
+  \label{sec:system_design}
+  \subsection{Design method}
+    \label{sub:design_method}
+    \input{sections/design/method}
+  \subsection{Decomposition description}
+    \label{sub:decomposition_description}
+    \input{sections/design/decomposition}
+\section{Component Description}
+  \label{sec:component_description}
+  \input{sections/components}
+\section{Feasibility and Resource Estimates}
+  \label{sec:feasibility_and_resource_estimate}
+  \input{sections/feasibility}
+\section{Software Requirements vs Components Traceability matrix} % (fold)
+  \label{sec:traceability_matrix}
+  \includegraphics[scale=0.55]{graphics/traceability_matrix.png}
+% section traceability_matrix (end)
+
+\appendix
+
+\chapter{Minutes}
+  \input{appendices/minutes}
+\end{document}
